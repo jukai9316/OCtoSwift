@@ -12,3 +12,9 @@ ViewController.m中
     [self.navigationController pushViewController:vc animated:YES];
     
 }
+
+在SeconViewController中，通过SwiftViewDelegate代理的方式，可以给ViewController反向传值
+override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    //代理
+    self.delegate?.removeSwiftView()
+}
